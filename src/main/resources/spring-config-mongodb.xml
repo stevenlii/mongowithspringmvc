@@ -9,9 +9,8 @@
     http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <mongo:mongo host="ci3.test.110monitor.com" port="27017" />
-<!--     <mongo:mongo host="121.42.177.83" port="27017" />
- -->    <mongo:db-factory dbname="mongoaliyun" mongo-ref="mongo" />
+    <mongo:mongo host="localhost" port="27017" />
+    <mongo:db-factory dbname="mongoaliyun" mongo-ref="mongo" />
 
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
         <constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
